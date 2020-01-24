@@ -4,7 +4,7 @@ import { Switch, Route, Link, useLocation } from "react-router-dom";
 import { Identity } from "./Pages/Identity";
 import { Zip } from "./Pages/Zip";
 import { Location } from "./Pages/Location";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 const variants = {
   hidden: { opacity: 0 },
@@ -15,18 +15,15 @@ const App: React.FC = () => {
   const location = useLocation();
   return (
     <div className="App">
-      <motion.div initial="hidden" animate="visible" variants={variants}>
-        Test
-      </motion.div>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">Identity</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/location">Location</Link>
         </li>
         <li>
-          <Link to="/dashboard">Dashboard</Link>
+          <Link to="/zip">Zip</Link>
         </li>
       </ul>
 
@@ -37,10 +34,10 @@ const App: React.FC = () => {
           <Route exact path="/">
             <Identity />
           </Route>
-          <Route path="/about">
+          <Route path="/location">
             <Location />
           </Route>
-          <Route path="/dashboard">
+          <Route path="/zip">
             <Zip />
           </Route>
         </Switch>
