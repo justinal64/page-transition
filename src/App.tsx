@@ -15,7 +15,7 @@ const App: React.FC = () => {
   const location = useLocation();
   return (
     <div className="App">
-      <ul>
+      <ul style={{ listStyle: "none" }}>
         <li>
           <Link to="/">Identity</Link>
         </li>
