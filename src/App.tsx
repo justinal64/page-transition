@@ -6,12 +6,7 @@ import { Zip } from "./Pages/Zip";
 import { Location } from "./Pages/Location";
 import { AnimatePresence } from "framer-motion";
 
-const variants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1 }
-};
-
-const App: React.FC = () => {
+function App() {
   const location = useLocation();
   return (
     <div className="App">
@@ -44,6 +39,6 @@ const App: React.FC = () => {
       </AnimatePresence>
     </div>
   );
-};
+}
 
 export default App;
